@@ -1,0 +1,376 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "category": "menswear",
+      "subcategory": "outerwear",
+      "name": "Men's Hooded Jacket",
+      "description": "A water-resistant hooded jacket suitable for spring and fall.",
+      "price": 49.99,
+      "quantity": 50,
+      "image": "/images/products/mens_hooded_jacket.jpg"
+    },
+    {
+      "id": 2,
+      "category": "menswear",
+      "subcategory": "outerwear",
+      "name": "Men's Leather Jacket",
+      "description": "Stylish leather jacket with a classic fit.",
+      "price": 129.99,
+      "quantity": 20,
+      "image": "/images/products/mens_leather_jacket.jpg"
+    },
+    {
+      "id": 3,
+      "category": "menswear",
+      "subcategory": "outerwear",
+      "name": "Men's Windbreaker",
+      "description": "Lightweight windbreaker perfect for outdoor activities.",
+      "price": 39.99,
+      "quantity": 30,
+      "image": "/images/products/mens_windbreaker.jpg"
+    },
+
+    {
+      "id": 4,
+      "category": "menswear",
+      "subcategory": "tops",
+      "name": "Men's Cotton T-Shirt",
+      "description": "Soft cotton tee available in multiple colors.",
+      "price": 14.99,
+      "quantity": 100,
+      "image": "/images/products/mens_tshirt.jpg"
+    },
+    {
+      "id": 5,
+      "category": "menswear",
+      "subcategory": "tops",
+      "name": "Men's Polo Shirt",
+      "description": "A classic polo shirt suitable for casual wear.",
+      "price": 24.99,
+      "quantity": 60,
+      "image": "/images/products/mens_polo.jpg"
+    },
+    {
+      "id": 6,
+      "category": "menswear",
+      "subcategory": "tops",
+      "name": "Men's Button-Up Shirt",
+      "description": "A crisp button-up shirt for formal and semi-formal occasions.",
+      "price": 34.99,
+      "quantity": 40,
+      "image": "/images/products/mens_buttonup.jpg"
+    },
+
+    {
+      "id": 7,
+      "category": "menswear",
+      "subcategory": "pants",
+      "name": "Men's Chino Pants",
+      "description": "Comfortable chinos with a slim fit.",
+      "price": 29.99,
+      "quantity": 50,
+      "image": "/images/products/mens_chino.jpg"
+    },
+    {
+      "id": 8,
+      "category": "menswear",
+      "subcategory": "pants",
+      "name": "Men's Jeans",
+      "description": "Classic denim jeans with a regular fit.",
+      "price": 44.99,
+      "quantity": 70,
+      "image": "/images/products/mens_jeans.jpg"
+    },
+    {
+      "id": 9,
+      "category": "menswear",
+      "subcategory": "pants",
+      "name": "Men's Sweatpants",
+      "description": "Soft and warm sweatpants for lounging or exercise.",
+      "price": 19.99,
+      "quantity": 80,
+      "image": "/images/products/mens_sweatpants.jpg"
+    },
+
+    {
+      "id": 10,
+      "category": "menswear",
+      "subcategory": "accessories",
+      "name": "Men's Baseball Cap",
+      "description": "A classic cap with adjustable strap.",
+      "price": 9.99,
+      "quantity": 100,
+      "image": "/images/products/mens_baseball_cap.jpg"
+    },
+    {
+      "id": 11,
+      "category": "menswear",
+      "subcategory": "accessories",
+      "name": "Men's Leather Belt",
+      "description": "A durable leather belt that pairs well with jeans or formal pants.",
+      "price": 19.99,
+      "quantity": 60,
+      "image": "/images/products/mens_leather_belt.jpg"
+    },
+    {
+      "id": 12,
+      "category": "menswear",
+      "subcategory": "accessories",
+      "name": "Men's Wool Scarf",
+      "description": "A warm woolen scarf for cold weather.",
+      "price": 14.99,
+      "quantity": 40,
+      "image": "/images/products/mens_wool_scarf.jpg"
+    },
+
+    {
+      "id": 13,
+      "category": "womenswear",
+      "subcategory": "outerwear",
+      "name": "Women's Trench Coat",
+      "description": "A classic trench coat with a flattering silhouette.",
+      "price": 89.99,
+      "quantity": 25,
+      "image": "/images/products/womens_trenchcoat.jpg"
+    },
+    {
+      "id": 14,
+      "category": "womenswear",
+      "subcategory": "outerwear",
+      "name": "Women's Puffer Jacket",
+      "description": "A warm puffer jacket for chilly days.",
+      "price": 99.99,
+      "quantity": 30,
+      "image": "/images/products/womens_puffer_jacket.jpg"
+    },
+    {
+      "id": 15,
+      "category": "womenswear",
+      "subcategory": "outerwear",
+      "name": "Women's Cardigan Sweater",
+      "description": "Soft cardigan sweater, perfect as a light layer.",
+      "price": 39.99,
+      "quantity": 45,
+      "image": "/images/products/womens_cardigan.jpg"
+    },
+
+    {
+      "id": 16,
+      "category": "womenswear",
+      "subcategory": "tops",
+      "name": "Women's Blouse",
+      "description": "A flowy blouse for both office and casual settings.",
+      "price": 29.99,
+      "quantity": 50,
+      "image": "/images/products/womens_blouse.jpg"
+    },
+    {
+      "id": 17,
+      "category": "womenswear",
+      "subcategory": "tops",
+      "name": "Women's Silk Camisole",
+      "description": "A luxurious silk camisole that can be layered or worn alone.",
+      "price": 49.99,
+      "quantity": 30,
+      "image": "/images/products/womens_camisole.jpg"
+    },
+    {
+      "id": 18,
+      "category": "womenswear",
+      "subcategory": "tops",
+      "name": "Women's Crop Top",
+      "description": "Trendy crop top perfect for summer.",
+      "price": 19.99,
+      "quantity": 70,
+      "image": "/images/products/womens_croptop.jpg"
+    },
+
+    {
+      "id": 19,
+      "category": "womenswear",
+      "subcategory": "pants",
+      "name": "Women's Skinny Jeans",
+      "description": "Figure-hugging skinny jeans that pair well with any top.",
+      "price": 44.99,
+      "quantity": 50,
+      "image": "/images/products/womens_skinny_jeans.jpg"
+    },
+    {
+      "id": 20,
+      "category": "womenswear",
+      "subcategory": "pants",
+      "name": "Women's Leggings",
+      "description": "Comfortable stretch leggings for everyday wear or workouts.",
+      "price": 24.99,
+      "quantity": 80,
+      "image": "/images/products/womens_leggings.jpg"
+    },
+    {
+      "id": 21,
+      "category": "womenswear",
+      "subcategory": "pants",
+      "name": "Women's Culottes",
+      "description": "Loose-fitting culottes for a relaxed but stylish look.",
+      "price": 34.99,
+      "quantity": 40,
+      "image": "/images/products/womens_culottes.jpg"
+    },
+
+    {
+      "id": 22,
+      "category": "womenswear",
+      "subcategory": "accessories",
+      "name": "Women's Silk Scarf",
+      "description": "A delicate silk scarf to elevate any outfit.",
+      "price": 29.99,
+      "quantity": 30,
+      "image": "/images/products/womens_silk_scarf.jpg"
+    },
+    {
+      "id": 23,
+      "category": "womenswear",
+      "subcategory": "accessories",
+      "name": "Women's Sun Hat",
+      "description": "A wide-brimmed sun hat perfect for summer vacations.",
+      "price": 19.99,
+      "quantity": 50,
+      "image": "/images/products/womens_sun_hat.jpg"
+    },
+    {
+      "id": 24,
+      "category": "womenswear",
+      "subcategory": "accessories",
+      "name": "Women's Leather Gloves",
+      "description": "Elegant leather gloves for cooler weather.",
+      "price": 39.99,
+      "quantity": 20,
+      "image": "/images/products/womens_leather_gloves.jpg"
+    },
+
+    {
+      "id": 25,
+      "category": "kidswear",
+      "subcategory": "outerwear",
+      "name": "Kid's Raincoat",
+      "description": "Waterproof raincoat to keep kids dry on rainy days.",
+      "price": 29.99,
+      "quantity": 40,
+      "image": "/images/products/kids_raincoat.jpg"
+    },
+    {
+      "id": 26,
+      "category": "kidswear",
+      "subcategory": "outerwear",
+      "name": "Kid's Fleece Jacket",
+      "description": "A warm fleece jacket for cool evenings.",
+      "price": 24.99,
+      "quantity": 50,
+      "image": "/images/products/kids_fleece_jacket.jpg"
+    },
+    {
+      "id": 27,
+      "category": "kidswear",
+      "subcategory": "outerwear",
+      "name": "Kid's Denim Jacket",
+      "description": "A stylish denim jacket for a casual look.",
+      "price": 34.99,
+      "quantity": 30,
+      "image": "/images/products/kids_denim_jacket.jpg"
+    },
+
+    {
+      "id": 28,
+      "category": "kidswear",
+      "subcategory": "tops",
+      "name": "Kid's Graphic Tee",
+      "description": "Fun graphic tee with playful designs.",
+      "price": 14.99,
+      "quantity": 60,
+      "image": "/images/products/kids_graphic_tee.jpg"
+    },
+    {
+      "id": 29,
+      "category": "kidswear",
+      "subcategory": "tops",
+      "name": "Kid's Hoodie",
+      "description": "A comfy hoodie great for playtime or lounging.",
+      "price": 19.99,
+      "quantity": 50,
+      "image": "/images/products/kids_hoodie.jpg"
+    },
+    {
+      "id": 30,
+      "category": "kidswear",
+      "subcategory": "tops",
+      "name": "Kid's Polo Shirt",
+      "description": "A neat polo shirt for a smart casual look.",
+      "price": 17.99,
+      "quantity": 40,
+      "image": "/images/products/kids_polo.jpg"
+    },
+
+    {
+      "id": 31,
+      "category": "kidswear",
+      "subcategory": "pants",
+      "name": "Kid's Cargo Pants",
+      "description": "Rugged cargo pants with plenty of pockets.",
+      "price": 19.99,
+      "quantity": 70,
+      "image": "/images/products/kids_cargo_pants.jpg"
+    },
+    {
+      "id": 32,
+      "category": "kidswear",
+      "subcategory": "pants",
+      "name": "Kid's Leggings",
+      "description": "Stretchy leggings for comfort and flexibility.",
+      "price": 12.99,
+      "quantity": 80,
+      "image": "/images/products/kids_leggings.jpg"
+    },
+    {
+      "id": 33,
+      "category": "kidswear",
+      "subcategory": "pants",
+      "name": "Kid's Joggers",
+      "description": "Soft joggers ideal for sports or casual wear.",
+      "price": 14.99,
+      "quantity": 60,
+      "image": "/images/products/kids_joggers.jpg"
+    },
+
+    {
+      "id": 34,
+      "category": "kidswear",
+      "subcategory": "accessories",
+      "name": "Kid's Beanie",
+      "description": "A cozy beanie to keep kids warm in winter.",
+      "price": 9.99,
+      "quantity": 90,
+      "image": "/images/products/kids_beanie.jpg"
+    },
+    {
+      "id": 35,
+      "category": "kidswear",
+      "subcategory": "accessories",
+      "name": "Kid's Mittens",
+      "description": "Soft mittens to protect little hands from the cold.",
+      "price": 7.99,
+      "quantity": 100,
+      "image": "/images/products/kids_mittens.jpg"
+    },
+    {
+      "id": 36,
+      "category": "kidswear",
+      "subcategory": "accessories",
+      "name": "Kid's Baseball Cap",
+      "description": "A fun cap for kids, adjustable and comfortable.",
+      "price": 8.99,
+      "quantity": 80,
+      "image": "/images/products/kids_baseball_cap.jpg"
+    }
+  ],
+  "cart": []
+}

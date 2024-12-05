@@ -1,11 +1,21 @@
-import React from 'react'
+// src/components/Header.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+function Header() {
   return (
-    <div>
-      <h1>this is the header</h1>
-    </div>
-  )
+    <header className="header">
+      <h1>LOGO</h1>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/Menswear">Men's Wear</Link>
+        <Link to="/Womenswear">Women's Wear</Link>
+        <Link to="/Kidswear">Kids' Wear</Link>
+        <Link to="/ShoppingCart">Cart</Link>
+        <Link to="/Login">Login</Link>
+      </nav>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
