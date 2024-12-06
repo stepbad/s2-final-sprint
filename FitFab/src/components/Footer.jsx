@@ -3,7 +3,6 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => (
   <footer>
-    <p>&copy; 2024 FitFab. All rights reserved.</p>
     <div className="social-links">
       <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
         <FaGithub />
@@ -15,6 +14,7 @@ const Footer = () => (
         <FaTwitter />
       </a>
     </div>
+    <p>&copy; 2024 FitFab. All rights reserved.</p>
   </footer>
 );
 

@@ -20,7 +20,7 @@ body {
 .menswear-container {
   position: relative;
   min-height: 100vh;
-  background: url('/images/menswear.jpg') center/cover no-repeat;
+  background: url('/images/menswear.jpg') center no-repeat;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -172,4 +172,74 @@ body {
   .product-name {
     font-size: 1.1rem;
   }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 50px; 
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #ccc; 
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer p {
+  margin-right: 20px;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #000;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  color: #00a1a5;
+  transform: translateY(-2px);
+  outline: none;
 }
