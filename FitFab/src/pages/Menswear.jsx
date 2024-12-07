@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiEye, FiShoppingCart } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import ProductDetails from './ProductDetails';
 
 const Menswear = () => {
   const [products, setProducts] = useState([]);
@@ -24,7 +25,7 @@ const Menswear = () => {
   };
 
   const handleViewDetails = (id) => {
-    navigate(`/product-details/${id}`);
+    navigate(`/ProductDetails/${id}`);
   };
 
   const handleAddToCart = (product) => {
@@ -71,9 +72,9 @@ const Menswear = () => {
                 <div className="button-group">
                   <button 
                     className="menswear-button" 
-                    onClick={() => handleViewDetails(product.id)}
+                    onClick={() => navigate(`/product/${product.id}`)}
                   >
-                    <FiEye style={{ marginRight: '8px' }} />
+                   <FiEye style={{ marginRight: '8px' }} />
                     View Details
                   </button>
                   <button 
