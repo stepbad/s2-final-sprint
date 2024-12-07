@@ -22,7 +22,7 @@ function ProductDetails() {
   }
 
   return (
-    <div className="menswear-container">
+    <div className="product-details-container">
       <div className="menswear-overlay">
         <div className="product-details">
           <img
