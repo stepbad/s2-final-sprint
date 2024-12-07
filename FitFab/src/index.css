@@ -111,7 +111,7 @@ footer p {
 .menswear-container {
   position: relative;
   min-height: calc(100vh - 120px); /* Account for header and footer */
-  background: url('/images/menswear.jpg') center / cover no-repeat;
+  background: url('/images/background-black-white.jpg') center / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
