@@ -22,24 +22,28 @@ function ProductDetails() {
   }
 
   return (
-    <div className="product-details" style={{ padding: "20px" }}>
-      <img
-        src={product.image}
-        alt={product.name}
-        style={{ width: "200px", height: "150px", marginBottom: "10px" }}
-      />
-      <h1>{product.name}</h1>
-      <p>Description: {product.description}</p>
-      <p>Category: {product.category}</p>
-      <p>Subcategory: {product.subcategory}</p>
-      <p>Price: ${product.price}</p>
-      <p>In stock: {product.quantity}</p>
-      <button onClick={handleAddToCart} style={{ marginRight: "10px" }}>
-        Add to Cart
-      </button>
-      <button onClick={() => navigate(-1)}>
-        Go Back
-      </button>
+    <div className="menswear-container">
+      <div className="menswear-overlay">
+        <div className="product-details">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="product-details-image"
+          />
+          <h1 className="product-details-title">{product.name}</h1>
+          <p className="product-details-description">Description: {product.description}</p>
+          <p className="product-details-price">Price: ${product.price}</p>
+          <p className="product-details-stock">In stock: {product.quantity}</p>
+          <div className="product-details-buttons">
+            <button onClick={handleAddToCart} className="product-details-button add-to-cart">
+              Add to Cart
+            </button>
+            <button onClick={() => navigate(-1)} className="product-details-button go-back">
+              Go Back
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
