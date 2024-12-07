@@ -2,9 +2,9 @@
   --background-color: #fff;        
   --text-color: #000;              
   --accent-color: #aeae97;         
-  --overlay-color: rgba(0, 0, 0, 0.5); 
+  --overlay-color: rgba(34, 27, 27, 0.019); 
   --overlay-blur: 6px;
-  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.357);
 }
 
 /* General Styles */
@@ -13,7 +13,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  font-family: 'Open Sans', sans-serif;
+  font-family: '', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 16px; 
   line-height: 1.6;
   background-color: var(--background-color);
@@ -36,7 +36,7 @@ main {
   background-color: #000;
   color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
@@ -44,6 +44,7 @@ main {
 }
 
 .logo-area {
+  margin-right: 40px;
   display: flex;
   align-items: center;
 }
@@ -65,7 +66,7 @@ main {
 }
 
 .nav-links a:hover {
-  color: yellow;
+  color: var(--accent-color);
 }
 
 /* Footer Styles */
@@ -75,10 +76,10 @@ footer {
   left: 0;
   width: 100%;
   height: 60px;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
@@ -86,7 +87,7 @@ footer {
 }
 
 footer p {
-  margin-right: 20px;
+  margin-left: 40px;
   font-size: 0.9rem;
 }
 
@@ -96,14 +97,14 @@ footer p {
 }
 
 .social-links a {
-  color: #000;
+  color: #fff;
   font-size: 1.2rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-links a:hover,
 .social-links a:focus {
-  color: #00a1a5;
+  color: var(--accent-color);
   transform: translateY(-2px);
 }
 
@@ -111,7 +112,7 @@ footer p {
 .menswear-container {
   position: relative;
   min-height: calc(100vh - 120px); /* Account for header and footer */
-  background: url('/images/background-black-white.jpg') center / cover no-repeat;
+  background: url('/images/background-blue-white.jpg') center / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,6 +145,8 @@ footer p {
 .menswear-title {
   font-size: 2.5rem;
   color: #fff;
+  stroke: #000;
+  stroke-width: 2px;
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
@@ -155,7 +158,7 @@ footer p {
   gap: 10px;
   margin-bottom: 40px;
   justify-content: center;
-  color: #fff;
+  color: #000;
 }
 
 .menswear-filter label {
@@ -232,13 +235,13 @@ footer p {
 }
 
 .menswear-button {
-  background: var(--accent-color);
+  background: var(--overlay-color);
   color: #000;
-  border: none;
+  stroke: var(--accent-color);
   border-radius: 24px;
   padding: 8px 16px;
   cursor: pointer;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   min-width: 100px;
   text-align: center;
@@ -247,7 +250,7 @@ footer p {
 
 .menswear-button:hover,
 .menswear-button:focus {
-  background: #00a1a5;
+  background: var(--accent-color);
   transform: translateY(-2px);
   outline: none;
 }
@@ -256,7 +259,7 @@ footer p {
 .product-details-container {
   position: relative;
   min-height: calc(100vh - 120px);
-  background: url('/images/menswear.jpg') center / cover no-repeat;
+  background: url('/images/background-black-white.jpg') center / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,9 +335,9 @@ footer p {
 }
 
 .product-details-button {
-  background: var(--accent-color);
+  background: var(--overlay-color);
   color: #000;
-  border: none;
+  border: solid;
   border-radius: 24px;
   padding: 8px 16px;
   cursor: pointer;
@@ -347,7 +350,7 @@ footer p {
 
 .product-details-button:hover,
 .product-details-button:focus {
-  background: #00a1a5;
+  background: var(--accent-color);
   transform: translateY(-2px);
   outline: none;
 }

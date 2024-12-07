@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { FiArrowLeft, FiShoppingCart } from 'react-icons/fi';
+
 
 function ProductDetails() {
   const { id } = useParams();
@@ -36,9 +38,11 @@ function ProductDetails() {
           <p className="product-details-stock">In stock: {product.quantity}</p>
           <div className="product-details-buttons">
             <button onClick={handleAddToCart} className="product-details-button add-to-cart">
+            <FiShoppingCart style={{ marginRight: '8px' }} />
               Add to Cart
             </button>
             <button onClick={() => navigate(-1)} className="product-details-button go-back">
+            <FiArrowLeft style={{ marginRight: '8px' }} />
               Go Back
             </button>
           </div>
