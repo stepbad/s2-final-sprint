@@ -7,11 +7,12 @@
   --card-bg: rgba(255, 255, 255, 0.8);
 }
 
+/* General Styles */
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px; 
   line-height: 1.6;
@@ -21,172 +22,11 @@ body {
 
 main {
   flex: 1;
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding-top: 60px; /* Space for header */
+  padding-bottom: 60px; /* Space for footer */
 }
 
-.menswear-container {
-  position: relative;
-  min-height: calc(100vh - 120px);
-  background: url('/images/menswear.jpg') center / cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0; 
-  margin: 0;
-}
-
-.menswear-overlay {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(var(--overlay-blur));
-  background: var(--overlay-color);
-  z-index: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-.menswear-content {
-  position: relative;
-  z-index: 1;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.menswear-title {
-  font-size: 2.5rem;
-  color:#fff;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.menswear-filter {
-  color:#fff;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 40px;
-  justify-content: center;
-}
-
-.menswear-filter label {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.menswear-filter select {
-  background: var(--background-color);
-  color: var(--text-color);
-  border: 1px solid var(--accent-color);
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  padding: 20px;
-  justify-items: center; 
-}
-
-.product-card {
-  flex: 1 1 200px;
-  max-width: 300px;
-  background: var(--card-bg);
-  backdrop-filter: blur(4px);
-  border-radius: 8px;
-  padding: 20px;
-  text-align: left; 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.product-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
-}
-
-.product-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.product-name, .product-price, .product-card p {
-  font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.product-name {
-  font-size: 1.3rem; 
-  margin: 10px 0;
-  font-weight: 600;
-}
-
-.product-price {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.button-group {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-start;
-}
-
-.menswear-button {
-  background: var(--accent-color);
-  color: #000;
-  border: none;
-  border-radius: 24px;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-weight: 400;
-  text-transform: uppercase;
-  transition: background 0.3s ease, transform 0.3s ease;
-  min-width: 100px;
-  text-align: center;
-}
-
-.menswear-button:hover,
-.menswear-button:focus {
-  background: #00a1a5;
-  transform: translateY(-2px);
-  outline: none;
-}
-
-@media (max-width: 768px) {
-  .menswear-title {
-    font-size: 2rem;
-  }
-
-  .menswear-filter {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .product-card {
-    padding: 15px;
-  }
-
-  .product-name {
-    font-size: 1.1rem;
-  }
-}
-
+/* Header Styles */
 .header-container {
   position: fixed;
   top: 0;
@@ -225,10 +65,10 @@ main {
 }
 
 .nav-links a:hover {
-  text-decoration: none;
   color: yellow;
 }
 
+/* Footer Styles */
 footer {
   position: fixed;
   bottom: 0;
@@ -248,13 +88,11 @@ footer {
 footer p {
   margin-right: 20px;
   font-size: 0.9rem;
-  color: #000;
 }
 
 .social-links {
   display: flex;
   gap: 20px;
-  margin-top: 10px;
 }
 
 .social-links a {
@@ -267,9 +105,154 @@ footer p {
 .social-links a:focus {
   color: #00a1a5;
   transform: translateY(-2px);
+}
+
+/* Menswear Section Styles */
+.menswear-container {
+  position: relative;
+  min-height: calc(100vh - 120px); /* Account for header and footer */
+  background: url('/images/menswear.jpg') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menswear-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(var(--overlay-blur));
+  background: var(--overlay-color);
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menswear-content {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menswear-title {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menswear-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  justify-content: center;
+  color: #fff;
+}
+
+.menswear-filter label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.menswear-filter select {
+  background: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  justify-items: center; 
+}
+
+.product-card {
+  flex: 1 1 200px;
+  max-width: 300px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-name, 
+.product-price, 
+.product-card p {
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.product-name {
+  font-size: 1.3rem; 
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.menswear-button {
+  background: var(--accent-color);
+  color: #000;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 400;
+  text-transform: uppercase;
+  min-width: 100px;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.menswear-button:hover,
+.menswear-button:focus {
+  background: #00a1a5;
+  transform: translateY(-2px);
   outline: none;
 }
 
+/* Product Details Section */
 .product-details-container {
   position: relative;
   min-height: calc(100vh - 120px);
@@ -277,23 +260,23 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0; 
+  padding: 0;
   margin: 0;
 }
-  
-  .product-details-overlay {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(var(--overlay-blur));
-    background: var(--overlay-color);
-    z-index: 0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
+.product-details-overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(var(--overlay-blur));
+  background: var(--overlay-color);
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .product-details-content {
   position: relative;
@@ -308,17 +291,16 @@ footer p {
   max-width: 600px;
   margin: 0 auto; 
   background: var(--card-bg); 
-  backdrop-filter: blur(4px);
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
 }
 
 .product-details-image {
   width: 500px;
   height: auto;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
   display: block;
-  margin: 0 auto;
   border-radius: 8px;
 }
 
@@ -330,15 +312,15 @@ footer p {
   color: var(--text-color);
 }
 
-.product-details-description,
-.product-details-category,
-.product-details-subcategory,
-.product-details-price,
+.product-details-description, 
+.product-details-category, 
+.product-details-subcategory, 
+.product-details-price, 
 .product-details-stock {
   font-size: 1rem;
   margin-bottom: 10px;
   font-weight: 600;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   color: var(--text-color);
 }
 
@@ -358,9 +340,9 @@ footer p {
   cursor: pointer;
   font-weight: 400;
   text-transform: uppercase;
-  transition: background 0.3s ease, transform 0.3s ease;
   min-width: 100px;
   text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .product-details-button:hover,
@@ -368,4 +350,24 @@ footer p {
   background: #00a1a5;
   transform: translateY(-2px);
   outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menswear-title {
+    font-size: 2rem;
+  }
+
+  .menswear-filter {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .product-card {
+    padding: 15px;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+  }
 }
