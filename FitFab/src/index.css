@@ -85,7 +85,7 @@ footer {
   align-items: center;
   padding: 0 20px;
   z-index: 1000;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--accent-color);
 }
 
 footer p {
@@ -207,8 +207,8 @@ footer p {
 }
 
 .product-image {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 275px;
   border-radius: 8px;
   margin-bottom: 15px;
 }

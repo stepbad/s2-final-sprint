@@ -169,11 +169,11 @@
       "id": 17,
       "category": "womenswear",
       "subcategory": "tops",
-      "name": "Women's Silk Camisole",
-      "description": "A luxurious silk camisole that can be layered or worn alone.",
+      "name": "Women's  T-Shirt",
+      "description": "A luxurious T-Shirt that can be layered or worn alone.",
       "price": 49.99,
       "quantity": 30,
-      "image": "/images/products/womens_camisole.jpg"
+      "image": "/images/products/womens_Tshirt.jpg"
     },
     {
       "id": 18,
@@ -200,11 +200,11 @@
       "id": 20,
       "category": "womenswear",
       "subcategory": "pants",
-      "name": "Women's Leggings",
-      "description": "Comfortable stretch leggings for everyday wear or workouts.",
+      "name": "Women's Sweats",
+      "description": "Comfortable loose sweats for everyday wear or workouts.",
       "price": 24.99,
       "quantity": 80,
-      "image": "/images/products/womens_leggings.jpg"
+      "image": "/images/products/womens_sweats.jpg"
     },
     {
       "id": 21,
@@ -324,21 +324,21 @@
       "id": 32,
       "category": "kidswear",
       "subcategory": "pants",
-      "name": "Kid's Leggings",
-      "description": "Stretchy leggings for comfort and flexibility.",
-      "price": 12.99,
-      "quantity": 80,
-      "image": "/images/products/kids_leggings.jpg"
+      "name": "Kid's Sweat Pants",
+      "description": "Soft Sweats, ideal for sports or casual wear.",
+      "price": 14.99,
+      "quantity": 60,
+      "image": "/images/products/kids_sweats.jpg"
     },
     {
       "id": 33,
       "category": "kidswear",
-      "subcategory": "pants",
-      "name": "Kid's Joggers",
-      "description": "Soft joggers ideal for sports or casual wear.",
+      "subcategory": "accessories",
+      "name": "Kid's Sneakers",
+      "description": "No-Lace Sneakers, ideal for sports or casual wear.",
       "price": 14.99,
       "quantity": 60,
-      "image": "/images/products/kids_joggers.jpg"
+      "image": "/images/products/kids_sneakers.jpg"
     },
 
     {
