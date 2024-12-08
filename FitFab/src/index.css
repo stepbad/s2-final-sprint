@@ -266,7 +266,7 @@ footer p {
   flex-direction: column;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .product-details-overlay {
@@ -295,6 +295,7 @@ footer p {
   padding: 20px;
   max-width: 600px;
   margin: 0 auto; 
+  margin-bottom: 20px;
   background: var(--card-bg); 
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);

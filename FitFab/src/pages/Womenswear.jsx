@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FiEye, FiShoppingCart } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+import ProductDetails from './ProductDetails';
 
 const Womenswear = () => {
   const [products, setProducts] = useState([]);
@@ -7,7 +10,7 @@ const Womenswear = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let url = 'http://localhost:5001/products?category=menswear';
+    let url = 'http://localhost:5001/products?category=womenswear';
     if (subcategory) {
       url += `&subcategory=${subcategory}`;
     }
@@ -22,10 +25,11 @@ const Womenswear = () => {
   };
 
   const handleViewDetails = (id) => {
-    navigate(`/product-details/${id}`);
+    navigate(`/ProductDetails/${id}`);
   };
 
   const handleAddToCart = (product) => {
+    // Ensure addToCart is defined in your context or parent component
     addToCart(product);
   };
 
@@ -52,7 +56,12 @@ const Womenswear = () => {
 
           <div className="products-grid">
             {products.map((product) => (
-              <div className="product-card" key={product.id}>
+              <motion.div 
+                className="product-card" 
+                key={product.id}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
                 <img 
                   src={product.image} 
                   alt={product.name} 
@@ -61,10 +70,22 @@ const Womenswear = () => {
                 <h3 className="product-name">{product.name}</h3>
                 <p className="product-price">${product.price.toFixed(2)}</p>
                 <div className="button-group">
-                  <button className="menswear-button" onClick={() => handleViewDetails(product.id)}>View Details</button>
-                  <button className="menswear-button" onClick={() => handleAddToCart(product)}>Add to Cart</button>
+                  <button 
+                    className="menswear-button" 
+                    onClick={() => navigate(`/product/${product.id}`)}
+                  >
+                   <FiEye style={{ marginRight: '8px' }} />
+                    View Details
+                  </button>
+                  <button 
+                    className="menswear-button" 
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    <FiShoppingCart style={{ marginRight: '8px' }} />
+                    Add to Cart
+                  </button>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
