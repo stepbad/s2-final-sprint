@@ -49,7 +49,7 @@
       "description": "A classic polo shirt suitable for casual wear.",
       "price": 24.99,
       "quantity": 60,
-      "image": "/images/products/mensTshirt.jpg"
+      "image": "/images/products/mens_polo_shirt.jpg"
     },
     {
       "id": 6,
@@ -59,7 +59,7 @@
       "description": "A crisp button-up shirt for formal and semi-formal occasions.",
       "price": 34.99,
       "quantity": 40,
-      "image": "/images/products/mensTshirt.jpg"
+      "image": "/images/products/mens_button_shirt.jpg"
     },
 
     {
