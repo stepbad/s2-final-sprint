@@ -207,8 +207,8 @@ footer p {
 }
 
 .product-image {
-  width: 200px;
-  height: 275px;
+  width: 225px;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -363,6 +363,34 @@ footer p {
   transform: translateY(-2px);
   outline: none;
 }
+
+.womenswear-container {
+  position: relative;
+  min-height: calc(100vh - 120px); /* Account for header and footer */
+  background: url('/images/background-pink.jpg') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.womens-product-image {
+  width: 225px;
+  height: 333px;
+}
+
+.kidswear-container {
+  position: relative;
+  min-height: calc(100vh - 120px); /* Account for header and footer */
+  background: url('/images/background-orange.jpg') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

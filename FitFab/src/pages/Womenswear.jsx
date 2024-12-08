@@ -34,12 +34,12 @@ const Womenswear = () => {
   };
 
   return (
-    <div className="menswear-container">
+    <div className="womenswear-container">
       <div className="menswear-overlay">
         <div className="menswear-content">
           <h1 className="menswear-title">Women's Products</h1>
           
-          <div className="womenswear-filter">
+          <div className="menswear-filter">
             <label htmlFor="subcategory-filter">Filter by:</label>
             <select 
               id="subcategory-filter" 
@@ -65,7 +65,7 @@ const Womenswear = () => {
                 <img 
                   src={product.image} 
                   alt={product.name} 
-                  className="product-image"
+                  className="womens-product-image"
                 />
                 <h3 className="product-name">{product.name}</h3>
                 <p className="product-price">${product.price.toFixed(2)}</p>
