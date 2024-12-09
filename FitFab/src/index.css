@@ -114,7 +114,7 @@ footer p {
 .menswear-container {
   position: relative;
   min-height: calc(100vh - 120px); /* Account for header and footer */
-  background: url('/images/background-lt-blue.jpg') center / cover no-repeat;
+  background: url('/images/background-blue-white.jpg') center / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -208,7 +208,7 @@ footer p {
 
 .product-image {
   width: 225px;
-  height: auto;
+  height: 333px;
   border-radius: 8px;
   margin-bottom: 15px;
 }
@@ -390,6 +390,41 @@ footer p {
   padding: 0;
   margin: 0;
 }
+
+.home-container {
+  position: relative;
+  min-height: calc(100vh - 120px); /* Account for header and footer */
+  background: url('/images/background-lt-blue.jpg') center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.categories {
+  display: flex;
+  padding-top: 80px;
+
+}
+
+
+
+.categories img {
+  width: 300px;
+  margin-right: 32px;
+  border-radius: 8px;
+}
+
+.categories img hover{
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transform: translateY(-2px);
+
+}
+
+
 
 
 /* Responsive Styles */
