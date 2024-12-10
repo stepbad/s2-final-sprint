@@ -28,10 +28,30 @@ const Womenswear = () => {
     navigate(`/ProductDetails/${id}`);
   };
 
-  const handleAddToCart = (product) => {
-    // Ensure addToCart is defined in your context or parent component
-    addToCart(product);
+  const handleAddToCart = async (product) => {
+    try {
+      // Post only the selected product to the cart endpoint
+      await fetch("http://localhost:5001/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          productId: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+        }),
+      });
+  
+      // Navigate to the cart page after adding the product
+      navigate("/cart");
+    } catch (error) {
+      console.error("Error adding to cart:", error);
+    }
   };
+  
+  
 
   return (
     <div className="womenswear-container">

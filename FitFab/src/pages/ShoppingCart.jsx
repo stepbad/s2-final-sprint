@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
-import "./../App.css";
+import { motion } from "framer-motion";
+import "./../index.css";
 
 function ShoppingCart() {
   const [cart, setCart] = useState([]);
@@ -9,43 +10,22 @@ function ShoppingCart() {
   // Function to delete an item from the cart
   const onDelete = async (id) => {
     try {
-      // Delete from the server
       await fetch(`http://localhost:5001/cart/${id}`, {
         method: "DELETE",
       });
-
-      // Update the UI by removing the deleted item
       setCart(cart.filter((item) => item.id !== id));
     } catch (error) {
       console.error("Error deleting item:", error);
     }
   };
 
-  // Function to update the cart (API + UI)
-  const updateCart = async (newCartItem) => {
-    try {
-      const res = await fetch("http://localhost:5001/cart", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(newCartItem),
-      });
-
-      const addedItem = await res.json();
-
-      // Update the UI with the new item
-      setCart([...cart, addedItem]);
-      setMessage("Item added to the cart successfully!");
-
-      // Clear the message after 3 seconds
-      setTimeout(() => setMessage(""), 3000);
-    } catch (error) {
-      console.error("Error updating cart:", error);
-    }
+  // Update the size, color, or quantity
+  const updateItem = (id, updates) => {
+    setCart(cart.map((item) =>
+      item.id === id ? { ...item, ...updates } : item
+    ));
   };
 
-  // Fetch cart data from the API
   useEffect(() => {
     fetch("http://localhost:5001/cart")
       .then((response) => response.json())
@@ -54,34 +34,103 @@ function ShoppingCart() {
   }, []);
 
   return (
-    <div className="cart">
-      <h1>Your Cart</h1>
-      {message && <div className="success-message">{message}</div>}
-      <div className="cart-grid">
-        {cart.map((cartItem) => (
-          <div key={cartItem.id} className="cart-item">
-            <img
-              src={cartItem.image}
-              alt={cartItem.name}
-              className="product-image"
-            /> \
-            <h2>{cartItem.name}
-              <FaTimes
-                style={{ color: "red", marginLeft: "10px", cursor: "pointer" }}
-                onClick={() => onDelete(cartItem.id)}
-              />
-            </h2>
-            <p> Price:
-              {cartItem.price}
-            </p>
-            
+    <div className="product-details-container">
+      <div className="product-details-overlay">
+        <div className="product-details-content">
+          <div className="cart">
+            <h1 className="cart-h1">Your Cart</h1>
+            {message && <div className="success-message">{message}</div>}
+            <div className="cart-grid">
+              {cart.map((item) => (
+                <div key={item.id} className="cart-item">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="product-image"
+                  />
+                  <div className="cart-labels">
+                    <label>
+                      Size:
+                      <select
+                        value={item.size || "M"}
+                        onChange={(e) =>
+                          updateItem(item.id, { size: e.target.value })
+                        }
+                      >
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                      </select>
+                    </label>
+                    <label>
+                      Color:
+                      <select
+                        value={item.color || "Black"}
+                        onChange={(e) =>
+                          updateItem(item.id, { color: e.target.value })
+                        }
+                      >
+                        {[
+                          "White",
+                          "Grey",
+                          "Black",
+                          "Brown",
+                          "Purple",
+                          "Blue",
+                          "Green",
+                          "Yellow",
+                          "Orange",
+                          "Red",
+                          "Pink",
+                        ].map((color) => (
+                          <option key={color} value={color}>
+                            {color}
+                          </option>
+                        ))}
+                      </select>
+                    </label>
+                    <div>
+                      Quantity:
+                      <button
+                        onClick={() =>
+                          updateItem(item.id, {
+                            quantity: (item.quantity || 1) - 1,
+                          })
+                        }
+                        disabled={(item.quantity || 1) <= 1}
+                      >
+                        -
+                      </button>
+                      <span>{item.quantity || 1}</span>
+                      <button
+                        onClick={() =>
+                          updateItem(item.id, {
+                            quantity: (item.quantity || 1) + 1,
+                          })
+                        }
+                      >
+                        +
+                      </button>
+                    </div>
+                    <p>Price: ${item.price}</p>
+                    <h2>
+                      {item.name}
+                      <FaTimes
+                        className="delete-icon"
+                        onClick={() => onDelete(item.id)}
+                      />
+                    </h2>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
 }
 
 export default ShoppingCart;
-
-

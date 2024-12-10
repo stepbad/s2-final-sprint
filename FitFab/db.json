@@ -363,18 +363,25 @@
   ],
   "cart": [
     {
-      "id": "f640",
-      "productId": "2",
-      "name": "Men's Leather Jacket",
-      "price": 129.99,
-      "image": "/images/products/mens_leather_jacket.jpg"
+      "id": "af71",
+      "productId": "3",
+      "name": "Men's Windbreaker",
+      "price": 39.99,
+      "image": "/images/products/mens_windbreaker.jpg"
     },
     {
-      "id": "5cf0",
-      "productId": "17",
-      "name": "Women's  T-Shirt",
-      "price": 49.99,
-      "image": "/images/products/womens_Tshirt.jpg"
+      "id": "0cdc",
+      "productId": "15",
+      "name": "Women's Cardigan",
+      "price": 39.99,
+      "image": "/images/products/womens_cardigan.jpg"
+    },
+    {
+      "id": "2158",
+      "productId": "28",
+      "name": "Kid's Graphic Tee",
+      "price": 14.99,
+      "image": "/images/products/kids_graphic_tee.jpg"
     }
   ]
 }
