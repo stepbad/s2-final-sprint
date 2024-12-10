@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "category": "menswear",
       "subcategory": "outerwear",
       "name": "Men's Hooded Jacket",
@@ -11,7 +11,7 @@
       "image": "/images/products/mens_hooded_jacket.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "category": "menswear",
       "subcategory": "outerwear",
       "name": "Men's Leather Jacket",
@@ -21,7 +21,7 @@
       "image": "/images/products/mens_leather_jacket.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "category": "menswear",
       "subcategory": "outerwear",
       "name": "Men's Windbreaker",
@@ -30,9 +30,8 @@
       "quantity": 30,
       "image": "/images/products/mens_windbreaker.jpg"
     },
-
     {
-      "id": 4,
+      "id": "4",
       "category": "menswear",
       "subcategory": "tops",
       "name": "Men's Cotton T-Shirt",
@@ -42,7 +41,7 @@
       "image": "/images/products/mensTshirt.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "category": "menswear",
       "subcategory": "tops",
       "name": "Men's Polo Shirt",
@@ -52,7 +51,7 @@
       "image": "/images/products/mens_polo_shirt.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "category": "menswear",
       "subcategory": "tops",
       "name": "Men's Button-Up Shirt",
@@ -61,9 +60,8 @@
       "quantity": 40,
       "image": "/images/products/mens_button_shirt.jpg"
     },
-
     {
-      "id": 7,
+      "id": "7",
       "category": "menswear",
       "subcategory": "pants",
       "name": "Men's Chino Pants",
@@ -73,7 +71,7 @@
       "image": "/images/products/mens_chino.jpg"
     },
     {
-      "id": 8,
+      "id": "8",
       "category": "menswear",
       "subcategory": "pants",
       "name": "Men's Jeans",
@@ -83,7 +81,7 @@
       "image": "/images/products/mens_jeans.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "category": "menswear",
       "subcategory": "pants",
       "name": "Men's Sweatpants",
@@ -92,9 +90,8 @@
       "quantity": 80,
       "image": "/images/products/mens_sweatpants.jpg"
     },
-
     {
-      "id": 10,
+      "id": "10",
       "category": "menswear",
       "subcategory": "accessories",
       "name": "Men's Baseball Cap",
@@ -104,7 +101,7 @@
       "image": "/images/products/mens_baseball_cap.jpg"
     },
     {
-      "id": 11,
+      "id": "11",
       "category": "menswear",
       "subcategory": "accessories",
       "name": "Men's Leather Belt",
@@ -114,7 +111,7 @@
       "image": "/images/products/mens_leather_belt.jpg"
     },
     {
-      "id": 12,
+      "id": "12",
       "category": "menswear",
       "subcategory": "accessories",
       "name": "Men's Wool Scarf",
@@ -123,9 +120,8 @@
       "quantity": 40,
       "image": "/images/products/mens_wool_scarf.jpg"
     },
-
     {
-      "id": 13,
+      "id": "13",
       "category": "womenswear",
       "subcategory": "outerwear",
       "name": "Women's Trench Coat",
@@ -135,7 +131,7 @@
       "image": "/images/products/womens_trenchcoat.jpg"
     },
     {
-      "id": 14,
+      "id": "14",
       "category": "womenswear",
       "subcategory": "outerwear",
       "name": "Women's Puffer Jacket",
@@ -145,7 +141,7 @@
       "image": "/images/products/womens_puffer_jacket.jpg"
     },
     {
-      "id": 15,
+      "id": "15",
       "category": "womenswear",
       "subcategory": "outerwear",
       "name": "Women's Cardigan",
@@ -154,9 +150,8 @@
       "quantity": 45,
       "image": "/images/products/womens_cardigan.jpg"
     },
-
     {
-      "id": 16,
+      "id": "16",
       "category": "womenswear",
       "subcategory": "tops",
       "name": "Women's Blouse",
@@ -166,7 +161,7 @@
       "image": "/images/products/womens_blouse.jpg"
     },
     {
-      "id": 17,
+      "id": "17",
       "category": "womenswear",
       "subcategory": "tops",
       "name": "Women's  T-Shirt",
@@ -176,7 +171,7 @@
       "image": "/images/products/womens_Tshirt.jpg"
     },
     {
-      "id": 18,
+      "id": "18",
       "category": "womenswear",
       "subcategory": "tops",
       "name": "Women's Crop Top",
@@ -185,9 +180,8 @@
       "quantity": 70,
       "image": "/images/products/womens_croptop.jpg"
     },
-
     {
-      "id": 19,
+      "id": "19",
       "category": "womenswear",
       "subcategory": "pants",
       "name": "Women's Skinny Jeans",
@@ -197,7 +191,7 @@
       "image": "/images/products/womens_skinny_jeans.jpg"
     },
     {
-      "id": 20,
+      "id": "20",
       "category": "womenswear",
       "subcategory": "pants",
       "name": "Women's Sweats",
@@ -207,7 +201,7 @@
       "image": "/images/products/womens_sweats.jpg"
     },
     {
-      "id": 21,
+      "id": "21",
       "category": "womenswear",
       "subcategory": "pants",
       "name": "Women's Culottes",
@@ -216,9 +210,8 @@
       "quantity": 40,
       "image": "/images/products/womens_culottes.jpg"
     },
-
     {
-      "id": 22,
+      "id": "22",
       "category": "womenswear",
       "subcategory": "accessories",
       "name": "Women's Silk Scarf",
@@ -228,7 +221,7 @@
       "image": "/images/products/womens_silk_scarf.jpg"
     },
     {
-      "id": 23,
+      "id": "23",
       "category": "womenswear",
       "subcategory": "accessories",
       "name": "Women's Sun Hat",
@@ -238,7 +231,7 @@
       "image": "/images/products/womens_sun_hat.jpg"
     },
     {
-      "id": 24,
+      "id": "24",
       "category": "womenswear",
       "subcategory": "accessories",
       "name": "Leather Gloves",
@@ -247,9 +240,8 @@
       "quantity": 20,
       "image": "/images/products/womens_leather_gloves.jpg"
     },
-
     {
-      "id": 25,
+      "id": "25",
       "category": "kidswear",
       "subcategory": "outerwear",
       "name": "Kid's Raincoat",
@@ -259,7 +251,7 @@
       "image": "/images/products/kids_raincoat.jpg"
     },
     {
-      "id": 26,
+      "id": "26",
       "category": "kidswear",
       "subcategory": "outerwear",
       "name": "Kid's Fleece Jacket",
@@ -269,7 +261,7 @@
       "image": "/images/products/kids_fleece_jacket.jpg"
     },
     {
-      "id": 27,
+      "id": "27",
       "category": "kidswear",
       "subcategory": "outerwear",
       "name": "Kid's Denim Jacket",
@@ -278,9 +270,8 @@
       "quantity": 30,
       "image": "/images/products/kids_denim_jacket.jpg"
     },
-
     {
-      "id": 28,
+      "id": "28",
       "category": "kidswear",
       "subcategory": "tops",
       "name": "Kid's Graphic Tee",
@@ -290,7 +281,7 @@
       "image": "/images/products/kids_graphic_tee.jpg"
     },
     {
-      "id": 29,
+      "id": "29",
       "category": "kidswear",
       "subcategory": "tops",
       "name": "Kid's Hoodie",
@@ -300,7 +291,7 @@
       "image": "/images/products/kids_hoodie.jpg"
     },
     {
-      "id": 30,
+      "id": "30",
       "category": "kidswear",
       "subcategory": "tops",
       "name": "Kid's Polo Shirt",
@@ -309,9 +300,8 @@
       "quantity": 40,
       "image": "/images/products/kids_polo.jpg"
     },
-
     {
-      "id": 31,
+      "id": "31",
       "category": "kidswear",
       "subcategory": "pants",
       "name": "Kid's Cargo Pants",
@@ -321,7 +311,7 @@
       "image": "/images/products/kids_cargo_pants.jpg"
     },
     {
-      "id": 32,
+      "id": "32",
       "category": "kidswear",
       "subcategory": "pants",
       "name": "Kid's Sweat Pants",
@@ -331,7 +321,7 @@
       "image": "/images/products/kids_sweats.jpg"
     },
     {
-      "id": 33,
+      "id": "33",
       "category": "kidswear",
       "subcategory": "accessories",
       "name": "Kid's Sneakers",
@@ -340,9 +330,8 @@
       "quantity": 60,
       "image": "/images/products/kids_sneakers.jpg"
     },
-
     {
-      "id": 34,
+      "id": "34",
       "category": "kidswear",
       "subcategory": "accessories",
       "name": "Kid's Beanie",
@@ -352,7 +341,7 @@
       "image": "/images/products/kids_beanie.jpg"
     },
     {
-      "id": 35,
+      "id": "35",
       "category": "kidswear",
       "subcategory": "accessories",
       "name": "Kid's Mittens",
@@ -362,7 +351,7 @@
       "image": "/images/products/kids_mittens.jpg"
     },
     {
-      "id": 36,
+      "id": "36",
       "category": "kidswear",
       "subcategory": "accessories",
       "name": "Kid's Baseball Cap",
@@ -372,5 +361,20 @@
       "image": "/images/products/kids_baseball_cap.jpg"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "f640",
+      "productId": "2",
+      "name": "Men's Leather Jacket",
+      "price": 129.99,
+      "image": "/images/products/mens_leather_jacket.jpg"
+    },
+    {
+      "id": "5cf0",
+      "productId": "17",
+      "name": "Women's  T-Shirt",
+      "price": 49.99,
+      "image": "/images/products/womens_Tshirt.jpg"
+    }
+  ]
 }
