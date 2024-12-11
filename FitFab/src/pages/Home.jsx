@@ -21,7 +21,7 @@ function Home() {
         <img 
           src="/images/products/kids_fleece_jacket.jpg"
           alt="Kidswear"/> 
-          <div class="image-title">Menswear</div>
+          <div class="image-title">Kidswear</div>
        </Link>
       </div>
     </div>
