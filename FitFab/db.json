@@ -17,7 +17,7 @@
       "name": "Men's Leather Jacket",
       "description": "Stylish leather jacket with a classic fit.",
       "price": 129.99,
-      "quantity": 20,
+      "quantity": 19,
       "image": "/images/products/mens_leather_jacket.jpg"
     },
     {
@@ -147,7 +147,7 @@
       "name": "Women's Cardigan",
       "description": "Soft cardigan sweater, perfect as a light layer.",
       "price": 39.99,
-      "quantity": 45,
+      "quantity": 43,
       "image": "/images/products/womens_cardigan.jpg"
     },
     {
@@ -267,7 +267,7 @@
       "name": "Kid's Denim Jacket",
       "description": "A stylish denim jacket for a casual look.",
       "price": 34.99,
-      "quantity": 30,
+      "quantity": 29,
       "image": "/images/products/kids_denim_jacket.jpg"
     },
     {
@@ -277,7 +277,7 @@
       "name": "Kid's Graphic Tee",
       "description": "Fun graphic tee with playful designs.",
       "price": 14.99,
-      "quantity": 60,
+      "quantity": 59,
       "image": "/images/products/kids_graphic_tee.jpg"
     },
     {
@@ -307,7 +307,7 @@
       "name": "Kid's Cargo Pants",
       "description": "Rugged cargo pants with plenty of pockets.",
       "price": 19.99,
-      "quantity": 70,
+      "quantity": 69,
       "image": "/images/products/kids_cargo_pants.jpg"
     },
     {
@@ -317,7 +317,7 @@
       "name": "Kid's Sweat Pants",
       "description": "Soft Sweats, ideal for sports or casual wear.",
       "price": 14.99,
-      "quantity": 60,
+      "quantity": 59,
       "image": "/images/products/kids_sweats.jpg"
     },
     {
@@ -361,27 +361,17 @@
       "image": "/images/products/kids_baseball_cap.jpg"
     }
   ],
-  "cart": [
+  "cart": [],
+  "users": [
     {
-      "id": "af71",
-      "productId": "3",
-      "name": "Men's Windbreaker",
-      "price": 39.99,
-      "image": "/images/products/mens_windbreaker.jpg"
+      "id": "1",
+      "email": "example@example.com",
+      "password": "hashedPassword"
     },
     {
-      "id": "0cdc",
-      "productId": "15",
-      "name": "Women's Cardigan",
-      "price": 39.99,
-      "image": "/images/products/womens_cardigan.jpg"
-    },
-    {
-      "id": "2158",
-      "productId": "28",
-      "name": "Kid's Graphic Tee",
-      "price": 14.99,
-      "image": "/images/products/kids_graphic_tee.jpg"
+      "id": "bfc2",
+      "email": "stephenbadc@gmail.com",
+      "password": "12345678"
     }
   ]
 }

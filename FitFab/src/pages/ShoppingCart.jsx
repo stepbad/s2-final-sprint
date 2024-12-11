@@ -1,30 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import "./../index.css";
 
 function ShoppingCart() {
   const [cart, setCart] = useState([]);
   const [message, setMessage] = useState("");
-
-  // Function to delete an item from the cart
-  const onDelete = async (id) => {
-    try {
-      await fetch(`http://localhost:5001/cart/${id}`, {
-        method: "DELETE",
-      });
-      setCart(cart.filter((item) => item.id !== id));
-    } catch (error) {
-      console.error("Error deleting item:", error);
-    }
-  };
-
-  // Update the size, color, or quantity
-  const updateItem = (id, updates) => {
-    setCart(cart.map((item) =>
-      item.id === id ? { ...item, ...updates } : item
-    ));
-  };
+  const [error, setError] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:5001/cart")
@@ -33,6 +15,54 @@ function ShoppingCart() {
       .catch((error) => console.error("Error fetching cart:", error));
   }, []);
 
+  const onDelete = async (id) => {
+    try {
+      await fetch(`http://localhost:5001/cart/${id}`, { method: "DELETE" });
+      setCart(cart.filter((item) => item.id !== id));
+      setMessage("Item removed successfully!");
+      setTimeout(() => setMessage(""), 3000);
+    } catch (error) {
+      console.error("Error deleting item:", error);
+      setError("Failed to remove the item.");
+      setTimeout(() => setError(""), 3000);
+    }
+  };
+
+  const updateItem = async (id, updates) => {
+    try {
+      const updatedItem = cart.find((item) => item.id === id);
+      await fetch(`http://localhost:5001/cart/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updates),
+      });
+      setCart(
+        cart.map((item) => (item.id === id ? { ...updatedItem, ...updates } : item))
+      );
+      setMessage("Item updated successfully!");
+      setTimeout(() => setMessage(""), 3000);
+    } catch (error) {
+      console.error("Error updating item:", error);
+      setError("Failed to update the item.");
+      setTimeout(() => setError(""), 3000);
+    }
+  };
+
+  const calculateTotal = () => {
+    const subtotal = cart.reduce(
+      (sum, item) => sum + item.price * (item.quantity || 1),
+      0
+    );
+    const tax = subtotal * 0.15; // 15% HST
+    return {
+      subtotal,
+      tax,
+      total: subtotal + tax,
+    };
+  };
+
+  const { subtotal, tax, total } = calculateTotal();
+
   return (
     <div className="product-details-container">
       <div className="product-details-overlay">
@@ -40,6 +70,7 @@ function ShoppingCart() {
           <div className="cart">
             <h1 className="cart-h1">Your Cart</h1>
             {message && <div className="success-message">{message}</div>}
+            {error && <div className="error-message">{error}</div>}
             <div className="cart-grid">
               {cart.map((item) => (
                 <div key={item.id} className="cart-item">
@@ -126,6 +157,18 @@ function ShoppingCart() {
                 </div>
               ))}
             </div>
+            {cart.length > 0 && (
+              <div className="cart-summary">
+                <p>Subtotal: ${subtotal.toFixed(2)}</p>
+                <p>Tax (15% HST): ${tax.toFixed(2)}</p>
+                <p>Total: ${total.toFixed(2)}</p>
+                {/* Link to the Checkout page */}
+                <Link to="/checkout" className="proceed-to-checkout-link">
+                  Proceed to Checkout
+                </Link>
+              </div>
+            )}
+            {cart.length === 0 && <p>Your cart is empty.</p>}
           </div>
         </div>
       </div>

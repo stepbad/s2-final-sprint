@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FiEye, FiShoppingCart } from 'react-icons/fi';
 import { motion } from 'framer-motion';
-import ProductDetails from './ProductDetails';
 
 const Kidswear = () => {
   const [products, setProducts] = useState([]);
   const [subcategory, setSubcategory] = useState('');
+  const [error, setError] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -17,20 +18,15 @@ const Kidswear = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data))
-      .catch((error) => console.error(error));
+      .catch((error) => setError('Failed to load products.'));
   }, [subcategory]);
 
   const handleSubcategoryChange = (e) => {
     setSubcategory(e.target.value);
   };
 
-  const handleViewDetails = (id) => {
-    navigate(`/ProductDetails/${id}`);
-  };
-
   const handleAddToCart = async (product) => {
     try {
-      // Post only the selected product to the cart endpoint
       await fetch("http://localhost:5001/cart", {
         method: "POST",
         headers: {
@@ -41,23 +37,26 @@ const Kidswear = () => {
           name: product.name,
           price: product.price,
           image: product.image,
+          quantity: 1, 
         }),
       });
-  
-      // Navigate to the cart page after adding the product
-      navigate("/cart");
+      setSuccessMessage(`${product.name} has been added to the cart!`);
+      setTimeout(() => setSuccessMessage(''), 3000);
     } catch (error) {
-      console.error("Error adding to cart:", error);
+      setError('Failed to add product to cart.');
+      setTimeout(() => setError(''), 3000);
     }
   };
-  
 
   return (
     <div className="kidswear-container">
       <div className="menswear-overlay">
         <div className="menswear-content">
           <h1 className="menswear-title">Kid's Products</h1>
-          
+
+          {error && <p className="error-message">{error}</p>}
+          {successMessage && <p className="success-message">{successMessage}</p>}
+
           <div className="menswear-filter">
             <label htmlFor="subcategory-filter">Filter by:</label>
             <select 

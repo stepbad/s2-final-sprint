@@ -48,6 +48,17 @@ main {
   margin-right: 40px;
   display: flex;
   align-items: center;
+  animation: logo-bounce 2s infinite;
+  border: 5px #e60000;
+}
+
+@keyframes logo-bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
 }
 
 .brand-logo {
@@ -58,6 +69,7 @@ main {
 .nav-links {
   display: flex;
   gap: 20px;
+  margin-right: 10px;
 }
 
 .nav-links a {
@@ -546,6 +558,304 @@ button:hover {
   text-align: right;
   width: 100%;
 }
+
+.cart-summary{
+  text-align: center;
+  color:#fff;
+  padding: 20px;
+}
+
+/* Error Messages */
+.error-message {
+  background-color: var(--error-color);
+  color: var(--error-text-color);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Success Messages */
+.success-message {
+  background-color: var(--success-color);
+  color: var(--success-text-color);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Login & Signup Container */
+.login-signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.login-signup-container h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form Inputs */
+.login-signup-container input,
+.login-signup-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-color);
+  font-size: 1rem;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+.login-signup-container input:focus,
+.login-signup-container select:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
+/* Buttons */
+.login-signup-container button {
+  width: 100%;
+  padding: 10px;
+  background: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.login-signup-container button:hover,
+.login-signup-container button:focus {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.login-signup-container p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.login-signup-container p button {
+  background: none;
+  color: var(--accent-color);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.login-signup-container p button:hover {
+  color: #000;
+}
+
+/* Error Messages */
+.error {
+  font-size: 0.8rem;
+  color: var(--error-text-color);
+  background: var(--error-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-signup-container {
+    width: 90%;
+  }
+
+  .login-signup-container h1 {
+    font-size: 1.8rem;
+  }
+}
+
+
+/* Checkout Page Styles */
+.checkout-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-content h1{
+  color:#fff;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.checkout-header h1 {
+
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkout-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.checkout-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.checkout-item h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.checkout-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.checkout-item button {
+  background-color: var(--error-color);
+  color: var(--error-text-color);
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-item button:hover {
+  background-color: #e60000;
+  transform: scale(1.05);
+}
+
+/* Checkout Summary Styles */
+.checkout-summary {
+  margin-top: 30px;
+  text-align: center;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-summary p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: var(--text-color);
+}
+
+.checkout-summary .submit-order-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-summary .submit-order-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Empty Cart Message */
+.empty-cart {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-top: 30px;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Proceed to Checkout Link */
+.proceed-to-checkout-link {
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.proceed-to-checkout-link:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Forms */
+select, input, button {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--accent-color);
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--accent-color);
+}
+
 
 
 /* Responsive Styles */
