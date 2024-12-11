@@ -88,13 +88,13 @@ const Checkout = ({ isLoggedIn }) => {
   
 
   return (
-    <div className="menswear-container">
+    <div className="home-container">
       <div className="menswear-overlay">
         <div className="checkout-content">
-        <h1>Checkout</h1>
-      <div className="cart-items">
-        {cartItems.length > 0 ? (
-          cartItems.map((item) => (
+          <h1>Please log in to submit order</h1>
+         <div className="cart-items">
+           {cartItems.length > 0 ? (
+           cartItems.map((item) => (
             <div key={item.id} className="checkout-item">
               <h2>{item.name}</h2>
               <p>Price: ${item.price.toFixed(2)}</p>

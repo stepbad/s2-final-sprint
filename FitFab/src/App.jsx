@@ -12,23 +12,20 @@ import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
 
 function App() {
-  const [user, setUser] = useState(null); // State to track logged-in user
+  const [user, setUser] = useState(null);
 
-  // Function to handle user login
   const handleLogin = (userData) => {
-    setUser(userData); // Save user data upon login
+    setUser(userData);
   };
 
-  // Function to handle user logout
   const handleLogout = () => {
-    setUser(null); // Clear user state on logout
+    setUser(null); 
   };
 
-  const isLoggedIn = !!user; // Boolean flag indicating login status
+  const isLoggedIn = !!user; 
 
   return (
     <>
-      {/* Header receives login status and logout handler */}
       <Header isLoggedIn={isLoggedIn} onLogout={handleLogout} />
       <Routes>
         {/* Public Routes */}
@@ -38,19 +35,15 @@ function App() {
         <Route path="/kidswear" element={<Kidswear />} />
         <Route path="/product/:id" element={<ProductDetails />} />
 
-        {/* Shopping Cart: Accessible to all users */}
         <Route path="/cart" element={<ShoppingCart />} />
 
-        {/* Checkout: Protected Route */}
         <Route
           path="/checkout"
           element={<Checkout isLoggedIn={isLoggedIn} />}
         />
 
-        {/* Login Page */}
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
 
-        {/* Redirect Unknown Routes to Home */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <Footer />

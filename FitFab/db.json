@@ -361,7 +361,16 @@
       "image": "/images/products/kids_baseball_cap.jpg"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "eca5",
+      "productId": "17",
+      "name": "Women's  T-Shirt",
+      "price": 49.99,
+      "image": "/images/products/womens_Tshirt.jpg",
+      "quantity": 1
+    }
+  ],
   "users": [
     {
       "id": "1",

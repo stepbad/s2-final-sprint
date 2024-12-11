@@ -162,7 +162,6 @@ function ShoppingCart() {
                 <p>Subtotal: ${subtotal.toFixed(2)}</p>
                 <p>Tax (15% HST): ${tax.toFixed(2)}</p>
                 <p>Total: ${total.toFixed(2)}</p>
-                {/* Link to the Checkout page */}
                 <Link to="/checkout" className="proceed-to-checkout-link">
                   Proceed to Checkout
                 </Link>

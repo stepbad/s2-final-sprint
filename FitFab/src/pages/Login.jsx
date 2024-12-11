@@ -74,10 +74,10 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <div className="menswear-container">
+    <div className="kidswear-container">
       <div className="menswear-overlay">
         <div className="menswear-content">
-         <h1 className="menswear-title">Men's Products</h1>
+         <h1 className="menswear-title">Log in to make a purchase.</h1>
           <div className="login-signup-container">
             {isSignup ? (
               <form onSubmit={handleSignupSubmit}>

@@ -215,15 +215,16 @@ footer p {
 
 .product-card {
   flex: 1 1 200px;
-  max-width: 300px;
+  max-width: 275px;
   background: var(--card-bg);
   border-radius: 8px;
-  padding: 20px;
+  padding: 10px;
+  margin:10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  text-align: left;
+  justify-content: center;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(4px);
 }
@@ -234,10 +235,12 @@ footer p {
 }
 
 .product-image {
-  width: 225px;
-  height: 333px;
+  width: 250px;
+  height: 375px;
   border-radius: 8px;
   margin-bottom: 15px;
+  text-align: center;
+  padding-left: 12px;
 }
 
 .product-name, 
@@ -403,8 +406,11 @@ footer p {
 }
 
 .womens-product-image {
-  width: 225px;
-  height: 333px;
+  width: 250px;
+  height: 375px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
 }
 
 .kidswear-container {
@@ -487,8 +493,8 @@ footer p {
 }
 
 
-.cart-item img {
-  width: 170px;
+.cart-imgage {
+  width: 100px;
   height: auto;
   margin-right: 20px;
   border-radius: 5px;
@@ -497,7 +503,7 @@ footer p {
 .cart-labels {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left */
+  align-items: flex-start;
   gap: 15px;
   
 }
@@ -695,16 +701,7 @@ button:hover {
   text-align: left;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .login-signup-container {
-    width: 90%;
-  }
 
-  .login-signup-container h1 {
-    font-size: 1.8rem;
-  }
-}
 
 
 /* Checkout Page Styles */
@@ -783,7 +780,8 @@ button:hover {
 }
 
 .checkout-item button:hover {
-  background-color: #e60000;
+  background-color: #e6000090;
+  color:#fff;
   transform: scale(1.05);
 }
 
@@ -868,10 +866,78 @@ select:focus, input:focus, button:focus {
   box-shadow: 0 0 5px var(--accent-color);
 }
 
+/* Category Titles for Images */
+.image-title {
+  position: relative;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.236); /* Semi-transparent black */
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: none; /* Prevent interfering with clicks on images */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Animation for Category Titles */
+.category-link:hover .image-title {
+  background-color: var(--accent-color); /* Change background to accent color */
+  color: #000;
+  transform: translate(-50%, -5px); /* Slight upward animation */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Checkout Section Button Hover Effect */
+.checkout-summary .submit-order-btn:hover {
+  background-color: var(--success-color); /* Highlight success on hover */
+  color: #000; /* Contrast text for clarity */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
+}
+
+/* Adjusted Cart Summary for Centering */
+.cart-summary {
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+  background: var(--card-bg);
+  padding: 20px;
+  max-width: 600px; /* Center within the page */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Area Animation */
+@keyframes logo-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-color);
+  }
+}
+
+.logo-area {
+  animation: logo-glow 3s infinite ease-in-out;
+}
 
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 888px) {
+  .nav-links{
+    font-size: small;
+  }
+  .login-signup-container {
+    width: 90%;
+  }
+
+  .login-signup-container h1 {
+    font-size: 1.8rem;
+  }
+
   .menswear-title {
     font-size: 2rem;
   }
@@ -887,5 +953,20 @@ select:focus, input:focus, button:focus {
 
   .product-name {
     font-size: 1.1rem;
+  }
+
+  .categories{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart-item{
+    font-size: small;
+  }
+
+  .cart img{
+    margin: 5px;
+    width: 130px;
+    height: 195px;
   }
 }
