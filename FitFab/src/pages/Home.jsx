@@ -8,15 +8,21 @@ function Home() {
         <Link to="/menswear" className="category-link">
         <img 
           src="/images/products/mens_leather_jacket.jpg"
-          alt="Menswear"/>        </Link>
+          alt="Menswear"/> 
+            <div class="image-title">Menswear</div>
+       </Link>
         <Link to="/womenswear" className="category-link">
         <img 
           src="/images/products/womens_trenchcoat.jpg"
-          alt="Womenswear"/>        </Link>
+          alt="Womenswear"/> 
+          <div class="image-title">Womenswear</div>
+       </Link>
         <Link to="/kidswear" className="category-link">
         <img 
           src="/images/products/kids_fleece_jacket.jpg"
-          alt="Kidswear"/>        </Link>
+          alt="Kidswear"/> 
+          <div class="image-title">Menswear</div>
+       </Link>
       </div>
     </div>
   );

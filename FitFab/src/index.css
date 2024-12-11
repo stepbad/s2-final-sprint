@@ -189,6 +189,21 @@ footer p {
   cursor: pointer;
 }
 
+.image-title {
+  position: relative;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.145); /* Semi-transparent background */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  pointer-events: none; 
+  display: flex;
+  justify-content: center;
+}
+
 /* Products Grid */
 .products-grid {
   display: grid;
@@ -422,17 +437,16 @@ footer p {
 
 
 
-.categories img {
+.category-link img {
   width: 300px;
   margin-right: 32px;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
-.categories img hover{
+.category-link img hover{
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  transform: translateY(-2px);
 
 }
 .cart-h1 {
