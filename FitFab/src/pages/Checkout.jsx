@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchCartItems, removeFromCart } from '../services/api'; 
+import { Link, useNavigate } from 'react-router-dom';
 
 const Checkout = ({ isLoggedIn }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -91,11 +92,20 @@ const Checkout = ({ isLoggedIn }) => {
     <div className="home-container">
       <div className="menswear-overlay">
         <div className="checkout-content">
-          <h1>Please log in to submit order</h1>
+          <h1>FitFab Checkout</h1>
          <div className="cart-items">
            {cartItems.length > 0 ? (
            cartItems.map((item) => (
             <div key={item.id} className="checkout-item">
+              
+                
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="product-image"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+              ></img>
               <h2>{item.name}</h2>
               <p>Price: ${item.price.toFixed(2)}</p>
               <p>Quantity: {item.quantity || 1}</p>
@@ -111,7 +121,7 @@ const Checkout = ({ isLoggedIn }) => {
           <p>Subtotal: ${subtotal.toFixed(2)}</p>
           <p>Tax (15% HST): ${tax.toFixed(2)}</p>
           <p>Total: ${total.toFixed(2)}</p>
-          <button onClick={handleSubmitOrder} disabled={!isLoggedIn}>
+          <button className ="submit-button" onClick={handleSubmitOrder} disabled={!isLoggedIn}>
             Submit Order
           </button>
         </div>

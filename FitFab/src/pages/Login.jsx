@@ -195,7 +195,7 @@ const Login = ({ onLogin }) => {
                 <button type="submit">Log In</button>
                 <p>
                   Don't have an account?{" "}
-                  <button type="button" onClick={() => setIsSignup(true)}>
+                  <button className="sign-button" onClick={() => setIsSignup(true)}>
                     Sign Up
                   </button>
                 </p>

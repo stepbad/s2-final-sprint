@@ -167,7 +167,9 @@ function ShoppingCart() {
                 </Link>
               </div>
             )}
-            {cart.length === 0 && <p>Your cart is empty.</p>}
+            <div className = "empty-cart">
+              {cart.length === 0 && <p>Your cart is empty.</p>}
+            </div>
           </div>
         </div>
       </div>

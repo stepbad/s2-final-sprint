@@ -125,7 +125,7 @@ footer p {
 /* Menswear Section Styles */
 .menswear-container {
   position: relative;
-  min-height: calc(100vh - 120px); /* Account for header and footer */
+  min-height: calc(100vh - 120px);
   background: url('/images/background-blue-white.jpg') center / cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -436,27 +436,34 @@ footer p {
 }
 
 .categories {
+  max-width: 1275px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding-left: 16px;
+  margin:10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
-  padding-top: 80px;
-
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
-
-
 .category-link img {
-  width: 300px;
+  width: 320px;
+  margin-left: 8px;
   margin-right: 32px;
   border-radius: 16px;
-  transform: translateY(-5px);
-  transition: transform 0.3s ease;
+  transform: translateY(24px);
 }
 
 .category-link img hover{
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  transform: scale(1.25);
+  box-shadow: 0 8px 15px var (--overlay-color);
   cursor: pointer;
-
 }
+
 .cart-h1 {
   color: #fff;
   text-align: center;
@@ -480,7 +487,7 @@ footer p {
   padding: 20px;
   background: var(--card-bg);
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.566);
   margin-bottom: 20px;
   width: 90%; /* Set a responsive width */
   max-width: 800px;
@@ -615,6 +622,7 @@ button:hover {
   justify-content: center;
   padding: 20px;
   background: var(--card-bg);
+  overlay:var(--overlay-blur);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -677,7 +685,7 @@ button:hover {
 
 .login-signup-container p button {
   background: none;
-  color: var(--accent-color);
+  color: #000;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -687,8 +695,10 @@ button:hover {
 }
 
 .login-signup-container p button:hover {
-  color: #000;
+  color: #fff;
+  background-color: var(--accent-color);
 }
+
 
 /* Error Messages */
 .error {
@@ -805,7 +815,7 @@ button:hover {
 .checkout-summary .submit-order-btn {
   margin-top: 20px;
   padding: 12px 20px;
-  background-color: var(--accent-color);
+  background-color: #000;
   color: var(--text-color);
   border: none;
   border-radius: 8px;
@@ -815,7 +825,7 @@ button:hover {
 }
 
 .checkout-summary .submit-order-btn:hover {
-  background-color: #000;
+  background-color: #fff;
   color: #fff;
   transform: scale(1.05);
 }
@@ -825,10 +835,11 @@ button:hover {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--text-color);
-  margin-top: 30px;
-  padding: 20px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px;
   background: var(--card-bg);
+  opacity: 90%;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -837,8 +848,9 @@ button:hover {
 /* Proceed to Checkout Link */
 .proceed-to-checkout-link {
   display: inline-block;
-  background: var(--accent-color);
-  color: var(--text-color);
+  background: #000;
+  opacity: 60%;
+  color: var(--accent-color);
   text-decoration: none;
   padding: 10px 20px;
   font-size: 1.1rem;
@@ -848,8 +860,8 @@ button:hover {
 }
 
 .proceed-to-checkout-link:hover {
-  background: #000;
-  color: #fff;
+  background: var(--accent-color);
+  color: #000;
   transform: scale(1.05);
 }
 
@@ -898,12 +910,14 @@ select:focus, input:focus, button:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle hover shadow */
 }
 
-/* Adjusted Cart Summary for Centering */
 .cart-summary {
   margin: 20px auto;
   text-align: center;
-  color: #fff;
+  font-size: larger;
+  color: #000;
   background: var(--card-bg);
+  backdrop-filter: var(--overlay-blur);
+  opacity: 80%;
   padding: 20px;
   max-width: 600px; /* Center within the page */
   border-radius: 10px;

@@ -127,7 +127,7 @@
       "name": "Women's Trench Coat",
       "description": "A classic trench coat with a flattering silhouette.",
       "price": 89.99,
-      "quantity": 25,
+      "quantity": 24,
       "image": "/images/products/womens_trenchcoat.jpg"
     },
     {
@@ -257,7 +257,7 @@
       "name": "Kid's Fleece Jacket",
       "description": "A warm fleece jacket for cool evenings.",
       "price": 24.99,
-      "quantity": 50,
+      "quantity": 49,
       "image": "/images/products/kids_fleece_jacket.jpg"
     },
     {
@@ -267,7 +267,7 @@
       "name": "Kid's Denim Jacket",
       "description": "A stylish denim jacket for a casual look.",
       "price": 34.99,
-      "quantity": 29,
+      "quantity": 26,
       "image": "/images/products/kids_denim_jacket.jpg"
     },
     {
@@ -277,7 +277,7 @@
       "name": "Kid's Graphic Tee",
       "description": "Fun graphic tee with playful designs.",
       "price": 14.99,
-      "quantity": 59,
+      "quantity": 57,
       "image": "/images/products/kids_graphic_tee.jpg"
     },
     {
@@ -361,16 +361,7 @@
       "image": "/images/products/kids_baseball_cap.jpg"
     }
   ],
-  "cart": [
-    {
-      "id": "eca5",
-      "productId": "17",
-      "name": "Women's  T-Shirt",
-      "price": 49.99,
-      "image": "/images/products/womens_Tshirt.jpg",
-      "quantity": 1
-    }
-  ],
+  "cart": [],
   "users": [
     {
       "id": "1",
