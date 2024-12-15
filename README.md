@@ -20,7 +20,7 @@ npm install
 
 # 4. Start the JSON Server
 
-If the program uses a db.json file for simulating a backend:
+Since the program uses a db.json file for simulating a backend:
 
 npx json-server --watch db.json --port 5001
 
